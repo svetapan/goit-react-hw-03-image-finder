@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Toaster } from 'react-hot-toast';
+import PropTypes from 'prop-types';
 import Searchbar from './Searchbar/Searchbar';
 import ImageGallery from './ImageGallery/ImageGallery';
 
@@ -13,7 +14,6 @@ class App extends Component {
   };
 
   render() {
-    // console.log('state:', this.state)
     return (
       <div>
         <Toaster
@@ -29,3 +29,10 @@ class App extends Component {
 }
 
 export default App;
+
+App.proptype = {
+   textSearch: PropTypes.string,
+   onSearch:  PropTypes.func,
+   searchValue:  PropTypes.func,
+   toastOptions: PropTypes.object,
+}

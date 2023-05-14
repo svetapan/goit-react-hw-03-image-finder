@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { FaSistrix } from "react-icons/fa";
 import { toast } from 'react-hot-toast';
+import PropTypes from 'prop-types';
 import css from './Searchbar.module.css'
 
 class Searchbar extends Component {
@@ -50,3 +51,9 @@ class Searchbar extends Component {
 }
 
 export default Searchbar;
+
+Searchbar.proptype = {
+  textSearch:  PropTypes.string,
+  onSearch: PropTypes.func,
+  onChange: PropTypes.func,
+}

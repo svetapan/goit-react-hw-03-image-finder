@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import css from './ImageGalleryItem.module.css';
 import Modal from '../Modal/Modal';
 
@@ -49,3 +50,14 @@ class ImageGalleryItem extends Component {
 }
 
 export default ImageGalleryItem;
+
+ImageGalleryItem.proptype = {
+  showModal: PropTypes.bool,
+  selectedItemId: PropTypes.bool,
+  id: PropTypes.string,
+  onClick: PropTypes.func,
+  webformatURL: PropTypes.string,
+  largeImageURL:  PropTypes.string,
+  tags: PropTypes.string,
+  selectedItem:  PropTypes.func,
+}

@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import getImages from '../../services/getImages';
 import css from './ImageGallery.module.css';
 import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
@@ -101,3 +102,14 @@ class ImageGallery extends Component {
 }
 
 export default ImageGallery;
+
+ImageGallery.proptype = {
+  images: PropTypes.object,
+  error: PropTypes.bool,
+  status: PropTypes.string,
+  loadedImagesCount: PropTypes.number,
+  step: PropTypes.number,
+  showButton: PropTypes.bool,
+  onClick:  PropTypes.func,
+  items: PropTypes.object
+}
